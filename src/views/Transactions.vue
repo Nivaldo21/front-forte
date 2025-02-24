@@ -161,7 +161,10 @@
 
     const submitTransaction = async (newTransaction:Transaccion) => {
     try {
-        newTransaction.fecha = new Date(newTransaction.fecha).toISOString();
+        // Se Ajusta la fecha para evitar la diferencia de horas
+        const localDate = new Date(newTransaction.fecha);
+        const adjustedDate = new Date(localDate.getTime() - localDate.getTimezoneOffset() * 60000);
+        newTransaction.fecha = adjustedDate.toISOString();
         if (edit.value) { //Editar transaccion
             const response = await updateTransaction(newTransaction);
             const index = transactions.value.findIndex(t => t._id === newTransaction._id);
