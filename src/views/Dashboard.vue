@@ -1,6 +1,6 @@
 <template>
     <div class="mt-25">
-        <div class="flex flex-row gap-10 mx-auto max-w-screen-xl">
+        <div class="flex flex-col md:flex-row gap-10 max-w-screen-xl mx-auto">
             <StatisticalCard title="Ingresos Totales" :detail="sumIncomeTransaction" type="money" icon="md-attachmoney" color-icon="green" color-text="text-green-700" color-detail="bg-green-100" />
             <StatisticalCard title="Gastos Totales" :detail="sumExpenseTransaction" type="money" icon="md-moneyoff" color-icon="red" color-text="text-red-400" color-detail="bg-red-100" />
             <StatisticalCard title="Balance Actual" :detail="sumIncomeTransaction-sumExpenseTransaction" type="money" icon="md-balance-twotone" color-icon="blue" color-text="text-blue-400" color-detail="bg-blue-100"/>
