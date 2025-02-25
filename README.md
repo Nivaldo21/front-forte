@@ -77,7 +77,7 @@ cd front-forte
 npm install
 
 # Ejecutar el proyecto en modo desarrollo
-npm run serve
+npm run dev
 ```
 
 El server se levantara en la ruta:  
